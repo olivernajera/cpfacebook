@@ -16,7 +16,41 @@
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#23145f+0,bb80d1+100 */
+  background: #23145f; /* Old browsers */
+  background: -moz-linear-gradient(left,  #23145f 0%, #bb80d1 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  #23145f 0%,#bb80d1 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  #23145f 0%,#bb80d1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23145f', endColorstr='#bb80d1',GradientType=1 ); /* IE6-9 */
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand{
+  color: white;
+  &:hover{
+    color: white;
+    opacity: 0.75;
+  }
+}
+
+.navbar-brand{
+  color: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {
+    background-color: #00c6ff;
+  }
 }
