@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <h2 class="text-center">Solicitud de dise&ntilde;o</h2>
+      
+      <div class="well">
+        <%= form_for "/solicitudes" do |f| %>
+            <div class="col-sm-6">
+              <div class="form-group text-center">
+                <div><span>Oficina</span></div>
+                <select name="oficina" id="oficina">
+                  <option value="1">Ciudad de México</option>
+                  <option value="2">Monterrey</option>
+                  <option value="3">Guadalajara</option>
+                  <option value="4">Piedras Negras</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group text-center">
+                <div><span>Tipo de dise&ntilde;o</span></div>
+                <select name="tipo_diseño" id="tipo_diseño">
+                  <option value="1">Facebook</option>
+                  <option value="2">Volante</option>
+                  <option value="3">Peri&oacute;dico</option>
+                  <option value="4">Otra</option>
+                </select>
+              </div>
+          </div>
+          
+          <h3 class="text-center">Requisitos y prestaciones</h3>
+          
+          <div class="form-group">
+            <div class="row">
+              <div class="col-sm-6">
+                <%= f.label :edad %>
+                <%= f.number_field :edad, class: 'form-control' %>
+              </div>
+              <div class="col-sm-6">
+                <%= f.label :sexo %>
+                <%= f.text_field :sexo, class: 'form-control' %>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.label :escolaridad %>
+                <%= f.text_field :escolaridad, class: 'form-control' %>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="form-group">
+                <%= f.label :sueldo %>
+                <%= f.number_field :sueldo, class: 'form-control' %>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :experiencia %>
+            <%= f.text_field :experiencia, class: 'form-control' %>
+          </div>           
+          
+          <div class="form-group">
+            <%= f.label :prestaciones %>
+            <%= f.text_area :prestaciones, class: 'form-control' %>
+          </div>          
+          
+          <h3 class="text-center">Datos de contacto</h3>
+          
+          <div class="form-group">
+            <%= f.label :reclutador %>
+            <%= f.text_field :reclutador, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.text_field :email, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :telefono %>
+            <%= f.text_field :telefono, class: 'form-control' %>
+          </div>    
+          
+          <div class="form-group">
+            <%= f.label :'actividades de la vacante' %>
+            <%= f.text_area :actividades, class: 'form-control' %>
+          </div>
+          
+          <div class="form-group">
+            <%= f.label :comentarios %>
+            <%= f.text_area :comentarios, class: 'form-control' %>
+          </div>
+          
+            <%= f.submit 'Enviar', class: 'btn btn-success' %>
+        <% end %>
+
+    </div>
+  </div>
+</div>
