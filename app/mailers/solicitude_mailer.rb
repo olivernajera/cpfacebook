@@ -1,7 +1,7 @@
-class SolicitudMailer < ActionMailer::Base
+class SolicitudeMailer < ActionMailer::Base
   default to: 'dg.hive@gmail.com'
   
-  def solicitud_email(oficina, tipo, vacante, edad, sueldo, sexo, escolaridad, experiencia, prestaciones, reclutador, email, telefono, actividades, comentarios)
+  def solicitude_email(oficina, tipo, vacante, edad, sueldo, sexo, escolaridad, experiencia, prestaciones, reclutador, email, telefono, actividades, comentarios)
     @oficina      = oficina
     @tipo         = tipo
     @vacante      = vacante

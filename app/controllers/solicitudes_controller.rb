@@ -21,7 +21,7 @@ class SolicitudesController < ApplicationController
       telefono     = params[:solicitude][:telefono]
       actividades  = params[:solicitude][:actividades]
       comentarios  = params[:solicitude][:comentarios]
-      SolicitudMailer.solicitud_email(oficina, tipo, vacante, edad, sueldo, sexo, escolaridad, experiencia, prestaciones, reclutador, email, telefono, actividades, comentarios).deliver
+      SolicitudeMailer.solicitude_email(oficina, tipo, vacante, edad, sueldo, sexo, escolaridad, experiencia, prestaciones, reclutador, email, telefono, actividades, comentarios).deliver
       redirect_to new_solicitude_path, notice: "Solicitud enviada."
     else
       redirect_to new_solicitude_path, notice: "Error de envío."
