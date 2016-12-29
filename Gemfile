@@ -16,6 +16,8 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# Use autoNumerics.js JQuery library
+gem 'autonumeric-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -27,6 +29,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Use Hirb for better db display
+gem 'hirb', '0.7.3'
 
 # Use Font Awesome for icons
 gem 'font-awesome-sass', '~> 4.7.0'

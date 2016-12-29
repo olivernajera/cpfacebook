@@ -1,61 +1,50 @@
 <div class="container">
   <div class="row">
+    <h2 class="text-center" style="margin-bottom:30px">Solicitud de publicaci&oacute;n</h2>
     <div class="col-md-4 col-md-offset-4">
-      <h2 class="text-center">Solicitud de dise&ntilde;o</h2>
-      
+      <%= flash[:notice] %>
       <div class="well">
-        <%= form_for "/solicitudes" do |f| %>
+        <%= form_for @solicitude do |f| %>
             <div class="col-sm-6">
               <div class="form-group text-center">
                 <div><span>Oficina</span></div>
-                <select name="oficina" id="oficina">
-                  <option value="1">Ciudad de México</option>
-                  <option value="2">Monterrey</option>
-                  <option value="3">Guadalajara</option>
-                  <option value="4">Piedras Negras</option>
-                </select>
+                <%= f.select(:oficina_id, options_for_select([['Monterrey'], ['Ciudad de Mexico'], ['Guadalajara'], ['Piedras Negras']])) %>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="form-group text-center">
-                <div><span>Tipo de dise&ntilde;o</span></div>
-                <select name="tipo_diseño" id="tipo_diseño">
-                  <option value="1">Facebook</option>
-                  <option value="2">Volante</option>
-                  <option value="3">Peri&oacute;dico</option>
-                  <option value="4">Otra</option>
-                </select>
+                <div><span>Tipo de diseño</span></div>
+                <%= f.select(:tipo_diseño_id, options_for_select([['Facebook'], ['Volante'], ['Periodico'], ['Otro']])) %>
               </div>
           </div>
           
-          <h3 class="text-center">Requisitos y prestaciones</h3>
+          <div class="form-group text-center">
+            <%= f.label :"Nombre de la vacante" %>
+            <%= f.text_field :vacante, class: 'form-control' %>
+          </div>
           
           <div class="form-group">
             <div class="row">
               <div class="col-sm-6">
                 <%= f.label :edad %>
-                <%= f.number_field :edad, class: 'form-control' %>
+                <%= f.text_field :edad, class: 'form-control' %>
               </div>
               <div class="col-sm-6">
-                <%= f.label :sexo %>
-                <%= f.text_field :sexo, class: 'form-control' %>
+                <%= f.label :sueldo %>
+                <%= f.text_field :sueldo, data: { autonumeric: { aSep: ',', aDec: '.', aSign: '$ '}}, class: 'form-control' %>
               </div>
             </div>
+          <%= f.radio_button(:sexo, "hombre") %>
+          <%= f.label(:sexo_hombre, "Hombre") %>
+          <%= f.radio_button(:sexo, "mujer") %>
+          <%= f.label(:sexo_mujer, "Mujer") %>
+          <%= f.radio_button(:sexo, "indistinto") %>
+          <%= f.label(:sexo_mujer, "Indistinto") %>    
           </div>
           
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <%= f.label :escolaridad %>
-                <%= f.text_field :escolaridad, class: 'form-control' %>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="form-group">
-                <%= f.label :sueldo %>
-                <%= f.number_field :sueldo, class: 'form-control' %>
-              </div>
-            </div>
+          <div class="form-group">
+            <%= f.label :escolaridad %>
+            <%= f.text_field :escolaridad, class: 'form-control' %>
           </div>
           
           <div class="form-group">
@@ -82,7 +71,7 @@
           
           <div class="form-group">
             <%= f.label :telefono %>
-            <%= f.text_field :telefono, class: 'form-control' %>
+            <%= f.number_field :telefono, class: 'form-control' %>
           </div>    
           
           <div class="form-group">
