@@ -17,6 +17,6 @@ class SolicitudeMailer < ActionMailer::Base
     @actividades  = actividades
     @comentarios  = comentarios
     
-    mail(from: email, subject: 'Solicitud de diseño y publicación')
+    mail(from: email, content_type: "text/html", subject: 'Solicitud de diseño y publicación')
   end
 end
