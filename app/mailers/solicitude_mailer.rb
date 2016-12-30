@@ -1,4 +1,4 @@
-class SolicitudeMailer < ActionMailer::Base.default_content_type = 'text/html'
+class SolicitudeMailer < ActionMailer::Base.content_type = 'text/html'
   default to: 'dg.hive@gmail.com'
   
   def solicitude_email(oficina, tipo, vacante, edad, sueldo, sexo, escolaridad, experiencia, prestaciones, reclutador, email, telefono, actividades, comentarios)
