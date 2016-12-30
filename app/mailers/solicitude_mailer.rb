@@ -17,8 +17,6 @@ class SolicitudeMailer < ActionMailer::Base
     @actividades  = actividades
     @comentarios  = comentarios
     
-    mail(from: email, subject: 'Solicitud de diseño y publicación') do |format|
-      format.html { render 'solicitude_email' }
-      format.text { render text: 'solicitude_email' }
+    mail(from: email, subject: 'Solicitud de diseño y publicación')
   end
 end
