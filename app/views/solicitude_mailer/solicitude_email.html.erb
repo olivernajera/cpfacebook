@@ -67,6 +67,8 @@
           h2{
             font-family: 'Open Sans', sans-serif;
             font-weight: 600;
+            border: 1px solid #ddd;
+            margin-bottom: 0; 
           }
 
           h3{
@@ -88,7 +90,7 @@
   </style>
 </head>
 
-<body width="800">
+<body style="width: 800px;">
 
         
         <table align="center" style="background-color: white;" width="700;">
@@ -132,7 +134,7 @@
           </table><br><br>
           
           <table class=table1>
-            <h3 style="text-align: center; background-color: #f5f5f5; padding: 12px">Actividades de la vacante</h3>
+            <h3 style="text-align: center;margin: auto; background-color: #f5f5f5; padding: 12px">Actividades de la vacante</h3>
 
             <div style="text-align: center; padding: 10px; text-align: left; border: 1px solid #ddd;">
               <span><%= @actividades %></span>
@@ -140,7 +142,7 @@
           </table><br><br>
 
           <table class=table1>
-            <h3 style="text-align: center; background-color: #f5f5f5; padding: 12px">Datos de contacto</h3>
+            <h3 style="text-align: center;margin: auto; background-color: #f5f5f5; padding: 12px">Datos de contacto</h3>
               <tr style="text-align:left">
                 <td style=" ">Reclutador: <span><%= @reclutador %></span></td>
               </tr>
@@ -153,7 +155,7 @@
             </table><br><br>
 
           <table class=table1>
-            <h3 style="; text-align: center; background-color: #f5f5f5; padding: 12px">Comentarios</h3>
+            <h3 style="; text-align: center;margin: auto; background-color: #f5f5f5; padding: 12px">Comentarios</h3>
 
             <div style="text-align: center; padding: 10px; text-align: left; border: 1px solid #ddd;">
               <span><%= @comentarios %></span>
