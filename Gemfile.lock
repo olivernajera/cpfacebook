@@ -38,6 +38,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
     autonumeric-rails (1.9.46.2)
       jquery-rails (>= 2.0.2)
@@ -56,6 +58,8 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
+    css_parser (1.4.7)
+      addressable
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
@@ -65,6 +69,7 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hirb (0.7.3)
+    htmlentities (4.3.4)
     i18n (0.7.0)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
@@ -91,6 +96,13 @@ GEM
     nokogiri (1.7.0)
       mini_portile2 (~> 2.1.0)
     pg (0.18.4)
+    premailer (1.8.7)
+      css_parser (>= 1.4.5)
+      htmlentities (>= 4.0.0)
+    premailer-rails (1.9.5)
+      actionmailer (>= 3, < 6)
+      premailer (~> 1.7, >= 1.7.9)
+    public_suffix (2.0.4)
     puma (3.6.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -174,7 +186,9 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)
+  nokogiri
   pg (= 0.18.4)
+  premailer-rails
   puma (~> 3.0)
   rails (~> 5.0.0)
   sass-rails (~> 5.0)

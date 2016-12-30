@@ -30,6 +30,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Use premailer for inline css on mails
+gem 'premailer-rails'
+
+# Dependency for premailer-rails
+gem 'nokogiri'
+
 # Use Hirb for better db display
 gem 'hirb', '0.7.3'
 
