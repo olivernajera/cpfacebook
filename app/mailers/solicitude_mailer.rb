@@ -18,6 +18,5 @@ class SolicitudeMailer < ActionMailer::Base
     @comentarios  = comentarios
     
     mail(from: email, subject: 'Solicitud de diseño y publicación')
-    content_type "text/html"
   end
 end
