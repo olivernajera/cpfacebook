@@ -19,5 +19,6 @@ class SolicitudeMailer < ActionMailer::Base
     
     mail(from: email, subject: 'Solicitud de diseño y publicación') do |format|
       format.html { render 'solicitude_email' }
+      format.text { render text: 'solicitude_email' }
   end
 end
