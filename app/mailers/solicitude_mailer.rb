@@ -1,5 +1,5 @@
 class SolicitudeMailer < ApplicationMailer
-  default to: 'oliver.najera@grupoinsert.com'
+  default from: 'oliver.najera@grupoinsert.com'
   
   def solicitude_email(oficina, tipo, vacante, edad, sueldo, sexo, escolaridad, experiencia, prestaciones, reclutador, email, telefono, actividades, comentarios)
     @oficina      = oficina
@@ -17,7 +17,7 @@ class SolicitudeMailer < ApplicationMailer
     @actividades  = actividades
     @comentarios  = comentarios
     
-    mail(from: email, subject: 'Solicitud de diseño y publicación') do |format|
+    mail(to: @email, subject: 'Solicitud de diseño y publicación') do |format|
       format.html { render 'solicitude_email' }
       format.text { render text: 'solicitude_email' }
   end
